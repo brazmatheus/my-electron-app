@@ -1,7 +1,7 @@
-const {postgres} = require('./dbconnect')
+import {postgres} from './dbconnect'
 
 
-exports.getCidades = async () => {
+export const getCidades = async () => {
     let resposta;
     try{
         console.log("tentando connect");

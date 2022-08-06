@@ -1,4 +1,4 @@
-const {Client} = require('pg')
+import {Client} from 'pg';
 
 const client = new Client({
     database: 'pine',
@@ -8,4 +8,4 @@ const client = new Client({
     password: 'teste123'
 })
 
-exports.postgres = client;
+export default client;

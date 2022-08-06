@@ -1,3 +1,9 @@
+// import { app, BrowserWindow } from 'electron'
+// import path from 'path'
+// import {JSDOM} from 'jsdom'
+// // import ind from './js/preload'
+// import {window} from new JSDOM();
+
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
 const {JSDOM} = require('jsdom');
@@ -10,12 +16,12 @@ const createWindow = () => {
     const win = new BrowserWindow({
         width: window.innerWidth,
         height: window.innerHeight, 
-        webPreferences: {
-            preload: path.join(__dirname, "js/preload.js")
-        }
+        // webPreferences: {
+        //     preload: path.join(__dirname, "js/preload.js")
+        // }
     })
 
-    win.loadFile('index.html');
+    win.loadFile('src/index.html');
 }
 
 app.whenReady().then(() => {

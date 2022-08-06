@@ -1,6 +1,8 @@
-function buscarCidades(){
-    const cidades = window.api.getCidades;
-    console.log(window.api);
+import {getCidades} from './preload';
+
+async function buscarCidades(){
+    const cidades = await getCidades();
+    console.log(cidades);
     document.getElementById("info").innerHTML = cidades;
 }
 
