@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Hello World!</title>
-  </head>
-  <link rel="stylesheet" href="css/index.css">
-  <body>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline'; script-src 'self'">
+  <title>Hello World!</title>
+</head>
+<link rel="stylesheet" href="css/index.css">
+
+<body>
+  <div style="display: flex;flex: 1;flex-direction: column;background-color: grey;height: 100vh;">
+    <textarea style="height: 50%" id="query">SELECT * FROM CIDADE WHERE ID = 1</textarea>
+    <button id="buscarCidades"> Executar Query</button>
     <div id="info"></div>
-    <input id="query" value="SELECT * FROM CIDADE WHERE ID = 1"/>
-    <button id="buscarCidades"></button>
-    <script src="js/index.js"></script> 
-  </body>
+  </div>
+  <script src="js/index.js"></script>
+</body>
+<style>
+  input {
+    height: 50%;
+  }
+
+  td, th {
+    border: 1px solid black;
+  }
+
+  th, td {
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+</style>
+
 </html>
