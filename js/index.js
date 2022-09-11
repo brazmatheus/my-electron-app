@@ -1,8 +1,11 @@
 async function buscarCidades(){
-    const queryReq = document.getElementById("query").value;
-    console.log(window.api);
-    const cidades = await window.api.getCidades(queryReq);
-    document.getElementById("info").innerHTML = cidades;
+    try{
+        localStorage.setItem("query", document.getElementById("query").value);
+        const cidades = await window.api.getCidades();
+        document.getElementById("info").innerHTML = cidades;
+    } catch(err){
+        console.error(err);
+    }
 }
 
 document.getElementById("buscarCidades").addEventListener("click", () => {

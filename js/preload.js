@@ -1,11 +1,10 @@
 const query = require('./dbQueries')
 const { contextBridge } = require("electron")
 
-const getCidades = async (q) => {
-    const param = q;
-    console.log("param", param)
-    const resposta = await query.getCidades(param);
+const getCidades = async () => {
+    const resposta = await query.getCidades(localStorage.getItem("query"));
     console.log("preloadresposta", resposta);
+    return resposta;
 }
 
 exposeGetResposta();
