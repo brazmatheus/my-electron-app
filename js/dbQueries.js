@@ -1,13 +1,13 @@
 const {postgres} = require('./dbconnect')
 
 
-exports.getCidades = async () => {
+exports.getCidades = async (q) => {
     let resposta;
     try{
         console.log("tentando connect");
         await postgres.connect();
         console.log("foi?");
-        const res = await postgres.query('SELECT * FROM cidade');
+        const res = await postgres.query(q || "select * from cidade");
         console.log("res", res);
         return JSON.stringify(res.rows);
     }catch(err){
