@@ -10,10 +10,18 @@
 <link rel="stylesheet" href="css/index.css">
 
 <body>
-  <div style="display: flex;flex: 1;flex-direction: column;background-color: grey;height: 100vh;">
-    <textarea style="height: 50%" id="query">SELECT * FROM CIDADE WHERE ID = 1</textarea>
-    <button id="buscarCidades"> Executar Query</button>
-    <div id="info"></div>
+  <div style="display: flex;flex: 1;flex-direction: row;background-color: rgb(172, 108, 108);height: 100vh;">
+    <div style="display: flex;
+    flex: 0.2;background-color: red ; height: 100%;" id="menu">
+      <div style="padding-bottom: 50px"> Busca Valores </div>
+    </div>
+    <div style="display: flex;flex: 0.8;flex-direction: column;background-color: grey;height: 100vh;">
+      <textarea style="height: 50%" id="query">
+        SELECT * FROM CIDADE WHERE ID = 1
+      </textarea>
+      <button id="buscarCidades"> Executar Query</button>
+      <div id="info"></div>
+    </div>
   </div>
   <script src="js/index.js"></script>
 </body>
@@ -22,14 +30,16 @@
     height: 50%;
   }
 
-  td, th {
+  td,
+  th {
     border: 1px solid black;
   }
 
-  th, td {
-  padding-left: 2vw;
-  padding-right: 2vw;
-}
+  th,
+  td {
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
 </style>
 
 </html>

@@ -40,4 +40,4 @@ document.getElementById("buscarCidades").addEventListener("click", () => {
     buscarCidades(document.getElementById("query").value);
 })
 
-// buscarCidades();
+
