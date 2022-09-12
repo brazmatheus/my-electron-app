@@ -10,12 +10,12 @@
 <link rel="stylesheet" href="css/index.css">
 
 <body>
-  <div style="display: flex;flex: 1;flex-direction: row;background-color: rgb(172, 108, 108);height: 100vh;">
-    <div style="display: flex;
-    flex: 0.2;background-color: red ; height: 100%;" id="menu">
-      <div style="padding-bottom: 50px"> Busca Valores </div>
+  <div style="display: flex;flex: 1;flex-direction: row;background-color: rgb(172, 108, 108);height: 100vh;border: 3px solid black">
+    <div style="display: flex;flex-direction: column;
+    flex: 0.2;background-color: rgb(245, 245, 245) ; height: 100%;" id="menu">
+      <div style="display: flex;padding: 10px; background-color: rgb(221, 221, 221);" id="item_menu" > Busca Valores </div>
     </div>
-    <div style="display: flex;flex: 0.8;flex-direction: column;background-color: grey;height: 100vh;">
+    <div style="display: flex;flex: 0.8;flex-direction: column;background-color: rgb(255, 232, 232);height: 100vh;">
       <textarea style="height: 50%" id="query">
         SELECT * FROM CIDADE WHERE ID = 1
       </textarea>

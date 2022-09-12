@@ -40,4 +40,16 @@ document.getElementById("buscarCidades").addEventListener("click", () => {
     buscarCidades(document.getElementById("query").value);
 })
 
+async function lerConfigs(){
+    const valores = await window.api.config;
+    console.log(valores)
+    let resposta = "";
+    for(let v of valores){
+        resposta += `<div style="display: flex;padding: 10px; background-color: ${v.color};"> ${v.title} </div>`
+    }
+    document.getElementById("menu").innerHTML = resposta;
+}
 
+document.getElementById("item_menu").addEventListener("click", async () => {
+    await lerConfigs()
+})
